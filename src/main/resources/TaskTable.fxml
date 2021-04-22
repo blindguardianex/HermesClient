@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="700.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.TaskTableControl">
+   <children>
+      <SplitPane dividerPositions="0.7650429799426934" orientation="VERTICAL" prefHeight="700.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.05555555555555555" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="27.0" prefWidth="160.0">
+                           <children>
+                              <TextField fx:id="filterField" layoutY="1.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="25.0" prefWidth="307.0" promptText="Фильтр" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="1.0" />
+                              <Button fx:id="sortButton" layoutX="309.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Сортировать" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="309.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="348.0" prefWidth="396.0">
+                           <children>
+                              <TableView fx:id="taskTable" layoutX="-86.0" layoutY="-86.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="taskNameColumn" minWidth="133.0" prefWidth="75.0" text="Название задачи" />
+                                  <TableColumn fx:id="taskSenderColumn" minWidth="133.0" prefWidth="75.0" text="Имя отправителя" />
+                                    <TableColumn fx:id="timeOfCreatedTaskColumn" minWidth="133.0" prefWidth="75.0" text="Дата создания" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="150.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.3918918918918919" layoutX="7.0" layoutY="-93.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="-Infinity" minWidth="0.0" prefHeight="55.0" prefWidth="160.0">
+                           <children>
+                              <TextArea fx:id="previewArea" editable="false" layoutX="-13.0" layoutY="-86.0" prefHeight="200.0" prefWidth="200.0" promptText="Поле предварительного просмотра" wrapText="true" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <VBox layoutX="8.0" layoutY="-93.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button fx:id="getMoreTasksButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="180.0" text="Загрузить еще 20" />
+                                    <Button fx:id="uploadAgainButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="180.0" text="Загрузить заново" />
+                                    <Button fx:id="getFullVersionButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="180.0" text="Вернуться в полную версию" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

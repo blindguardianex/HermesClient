@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.TaskCreatingControl">
+   <children>
+      <GridPane layoutX="47.0" layoutY="66.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="425.0" minWidth="10.0" prefWidth="425.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="280.0" minHeight="100.0" prefHeight="269.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="170.0" text="Наименование задачи">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="170.0" text="Категория задачи" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="170.0" text="Опишите суть проблемы:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="taskName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="30.0" promptText="Наименование" GridPane.columnIndex="1" />
+            <ComboBox fx:id="categoryBox" prefHeight="30.0" prefWidth="435.0" promptText="&lt;Выберите категорию&gt;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="selectedFile" editable="false" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea fx:id="taskBody" prefHeight="200.0" prefWidth="200.0" promptText="Описание задачи" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Button fx:id="sendTask" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="175.0" text="Отправить" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="chooseFile" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="167.0" text="Прикрепить файл" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

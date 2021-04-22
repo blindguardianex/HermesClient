@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.RegControl">
+   <children>
+      <TextField fx:id="email" layoutX="12.0" layoutY="36.0" prefHeight="25.0" prefWidth="377.0" promptText="Адрес электронной почты" />
+      <PasswordField fx:id="passwordReg" layoutX="12.0" layoutY="72.0" prefHeight="25.0" prefWidth="377.0" promptText="Пароль" />
+      <PasswordField fx:id="passwordValidateReg" layoutX="12.0" layoutY="106.0" prefHeight="25.0" prefWidth="377.0" promptText="Подтвердите пароль" />
+      <TextField fx:id="lastNameReg" layoutX="12.0" layoutY="141.0" prefHeight="25.0" prefWidth="377.0" promptText="Фамилия" />
+      <TextField fx:id="firstNameReg" layoutX="12.0" layoutY="177.0" prefHeight="25.0" prefWidth="377.0" promptText="Имя" />
+      <TextField fx:id="otherNameReg" layoutX="12.0" layoutY="215.0" prefHeight="25.0" prefWidth="377.0" promptText="Отчество" />
+      <ComboBox fx:id="departmentBox" layoutX="12.0" layoutY="251.0" prefHeight="25.0" prefWidth="377.0" />
+      <ComboBox fx:id="positionBox" layoutX="12.0" layoutY="287.0" prefHeight="25.0" prefWidth="377.0" />
+      <TextField fx:id="phoneNumberReg" layoutX="12.0" layoutY="328.0" prefHeight="25.0" prefWidth="377.0" promptText="Номер телефона" />
+      <Button fx:id="registrationFinal" layoutX="12.0" layoutY="360.0" mnemonicParsing="false" onAction="#doRegistration" prefHeight="25.0" prefWidth="377.0" text="Зарегистироваться" />
+      <Label alignment="CENTER" layoutX="13.0" layoutY="14.0" prefHeight="17.0" prefWidth="377.0" text="Регистрация нового пользователя">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

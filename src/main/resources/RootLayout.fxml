@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="520.0" minWidth="600.0" prefHeight="520.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.RootControl">
+   <top>
+      <VBox minWidth="600.0" prefHeight="49.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="applicationName" alignment="CENTER" prefHeight="25.0" prefWidth="428.0" text="Hermes_v1.01_beta">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="version" alignment="CENTER" prefHeight="26.0" prefWidth="59.0" text="Version" />
+                  <Button fx:id="minimizeButton" mnemonicParsing="false" text="Минимизировать" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <MenuBar prefHeight="25.0" prefWidth="615.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Файл">
+                        <items>
+                          <MenuItem fx:id="close" mnemonicParsing="false" text="Выход" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Опции">
+                        <items>
+                          <MenuItem fx:id="options" mnemonicParsing="false" onAction="#openOptions" text="Настройки" />
+                              <MenuItem fx:id="fixTop" mnemonicParsing="false" text="Закрепить поверх окон" />
+                            <MenuItem fx:id="minimize" mnemonicParsing="false" text="Минимизировать" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Помощь">
+                        <items>
+                          <MenuItem fx:id="needUpdate" mnemonicParsing="false" text="Проверить обновления" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <Label fx:id="taskStats" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
